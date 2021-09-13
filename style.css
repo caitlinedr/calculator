@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+/* calculator project */
+
+.calculator {
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  border: 1px black solid;
+  background: rgb(156, 203, 247);
+  width: 450px;
+  height: 625px;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 100px;
+}
+
+/* display */
+
+.display {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row: 1;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: rgb(116, 160, 180);
+  border-radius: 10px;
+}
+
+.held-label {
+  grid-row: 1;
+  grid-column: 1 / 6;
+}
+
+.held-value {
+ grid-row: 2;
+}
+
+.next-operation {
+  grid-row: 3
+}
+
+.next-value {
+  grid-row: 3;
+  grid-column: 5;
+}
+
+/* controls */
+
+.controls {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px;
+}
+
+.memory {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: 1fr 2fr .5fr;
+  grid-gap: 10px;
+}
+
+.memory button {
+  background-color: gray;
+  font-size: 20px;
+}
+
+.operations {
+  grid-column: 4 / 5;
+  grid-row: 1/ 6;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.operations button {
+  background-color: orange;
+  font-size: 20px;
+}
+
+.digits {
+  grid-row: 2 / 6;
+  grid-column: 1 /4;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.digits button {
+  background-color: darkgray;
+  font-size: 20px;
+}
